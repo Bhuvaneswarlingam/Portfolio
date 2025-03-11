@@ -474,21 +474,64 @@
                     <!-- Modal Templates Popup
                     -------------------------------------------- -->
                     <div id="modal-01" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-fuji.jpg" alt="">
-                
-                            <div class="modal-popup__desc">
-                                <h5>Youtube Thumbnails</h5>
-                                <p>Bringing my creative projects to life with eye-catching thumbnails that reflect my personal style and skills. Every thumbnail is carefully crafted with bold typography, dynamic layouts, and visuals that pop. Perfect for showcasing my video editing, graphic design, and content creation abilities.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Cinematic Chronicles</li>
-                                    <li>Graphic Design</li>
-                                </ul>
-                            </div>
-                
-                            <a href="https://1drv.ms/f/c/5da58f40f742fd5f/ErblvVeNsB5InxR64iluI48Bk1ItOWJFC3zRj0TCQCcA0w?e=JvuBus" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
+    <div class="modal-popup">
+        <img src="images/portfolio/gallery/g-fuji.jpg" alt="YouTube Thumbnails">
+        
+        <div class="modal-popup__desc">
+            <h5>YouTube Thumbnails</h5>
+            <p>Each thumbnail is crafted with bold typography, dynamic layouts, and visuals that grab attention.</p>
+            
+            <ul class="modal-popup__cat">
+                <li>Fascinated Saga</li>
+                <li>Graphic Design</li>
+            </ul>
+
+            <!-- Image Gallery -->
+            <div class="image-gallery">
+                <a href="https://1drv.ms/i/c/5da58f40f742fd5f/ESSsy5OlpwNKmAwDEi5ka34BSvpunLgEvu0BjPzQ2sQMkQ?e=JhSXnR" target="_blank">
+                    <img src="https://1drv.ms/i/c/5da58f40f742fd5f/ESSsy5OlpwNKmAwDEi5ka34BSvpunLgEvu0BjPzQ2sQMkQ?e=JhSXnR" alt="Thumbnail 1">
+                </a>
+                <a href="https://1drv.ms/i/c/5da58f40f742fd5f/EXlSEpaFVKtIlk9D1QjfeboBhEHQKLHZauwRJ_ApFd8hHw?e=q69JDt" target="_blank">
+                    <img src="https://1drv.ms/i/c/5da58f40f742fd5f/EXlSEpaFVKtIlk9D1QjfeboBhEHQKLHZauwRJ_ApFd8hHw?e=q69JDt" alt="Thumbnail 2">
+                </a>
+                <a href="https://1drv.ms/i/c/5da58f40f742fd5f/EY-hVbG2UyRIqKapHRIfqPYB3qVBDCiWBHB3XFEZRp-GbQ?e=syS0Ry" target="_blank">
+                    <img src="https://1drv.ms/i/c/5da58f40f742fd5f/EY-hVbG2UyRIqKapHRIfqPYB3qVBDCiWBHB3XFEZRp-GbQ?e=syS0Ry" alt="Thumbnail 3">
+                </a>
+            </div>
+
+        </div>
+
+        <a href="https://1drv.ms/f/c/5da58f40f742fd5f/ErblvVeNsB5InxR64iluI48Bk1ItOWJFC3zRj0TCQCcA0w?e=JvuBus" class="modal-popup__details" target="_blank">
+            Full Project Link
+        </a>
+    </div>
+</div>
+
+<style>
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+.image-gallery a {
+    display: inline-block;
+    width: 100px; /* Adjust as needed */
+    height: 100px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.image-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.image-gallery a:hover img {
+    transform: scale(1.1);
+}
+</style>
+
 
                     <div id="modal-02" hidden>
                         <div class="modal-popup">
