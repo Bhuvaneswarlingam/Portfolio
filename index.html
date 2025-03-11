@@ -473,7 +473,7 @@
 
                     <!-- Modal Templates Popup
                     -------------------------------------------- -->
-                   <div id="modal-01" hidden>
+                  <div id="modal-01" hidden>
     <div class="modal-popup">
         <img src="images/portfolio/gallery/g-fuji.jpg" alt="YouTube Thumbnails">
         
@@ -482,12 +482,13 @@
             <p>Each thumbnail is crafted with bold typography, dynamic layouts, and visuals that grab attention.</p>
             
             <ul class="modal-popup__cat">
-                <li>Fascinated Saga</li>
+                <li>Cinematic Chronicles</li>
                 <li>Graphic Design</li>
             </ul>
 
-            <!-- Image Gallery (Larger Grid) -->
+            <!-- Scrollable Image Gallery -->
             <div class="image-gallery">
+                <div class="image-scroll">
                 <a href="https://1drv.ms/i/c/5da58f40f742fd5f/ESSsy5OlpwNKmAwDEi5ka34BSvpunLgEvu0BjPzQ2sQMkQ?e=VbPRSW" target="_blank">
                     <img src="https://1drv.ms/i/c/5da58f40f742fd5f/IQQkrMuTpacDSpgMAxIuZGt-AZtWa4iq2zJviPo1Tu2AKHk?width=2340&height=1080" width="2340" height="1080" />
                 </a>
@@ -532,8 +533,8 @@
                 </a>
                 <a href="https://1drv.ms/i/c/5da58f40f742fd5f/ETFk7Ch7h2tMvi4MtQ484lwBaxYU3i2fllJw6aTaBKAY6Q?e=0fKePN" target="_blank">
                     <img src="https://1drv.ms/i/c/5da58f40f742fd5f/IQQxZOwoe4drTL4uDLUOPOJcAauP9YgWfQLjvCYIWxVlK5Y?width=2061&height=1080" width="2061" height="1080" />
-                    
-                    
+                </a>
+                </div>
             </div>
 
         </div>
@@ -545,52 +546,69 @@
 </div>
 
 <style>
-/* Bigger Grid */
-.image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive Grid */
-    gap: 15px;
-    margin-top: 15px;
-}
-.image-gallery a {
-    display: block;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.image-gallery img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-.image-gallery a:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Blurred Background Hover Effect for Modal */
+/* Modal Styling */
 #modal-01 {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, 0.1); /* Transparent Background */
-    backdrop-filter: blur(15px); /* Blur Effect */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease-in-out;
     max-width: 90%;
     width: 600px;
+    max-height: 80vh; /* Ensures it doesn't take full screen */
+    overflow: hidden; /* Prevents full overflow */
 }
 
-/* Show Modal on Hover */
+/* Hover Effect */
 #modal-01:hover {
     backdrop-filter: blur(25px);
     background: rgba(255, 255, 255, 0.2);
 }
-</style>
 
+/* Scrollable Image Gallery */
+.image-scroll {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 15px;
+    max-height: 300px; /* Set a max height */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 10px;
+}
+
+/* Scrollbar Customization */
+.image-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+.image-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+.image-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Image Styling */
+.image-scroll a {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image-scroll img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.image-scroll a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+</style>
 
 
                     <div id="modal-02" hidden>
