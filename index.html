@@ -536,12 +536,11 @@
                 </a>
                 </div>
             </div>
-
         </div>
-
-        <a href="https://1drv.ms/f/c/5da58f40f742fd5f/ErblvVeNsB5InxR64iluI48Bk1ItOWJFC3zRj0TCQCcA0w?e=JvuBus" class="modal-popup__details" target="_blank">
-            Full Project Link
-        </a>
+       <a href="https://1drv.ms/f/c/5da58f40f742fd5f/ErblvVeNsB5InxR64iluI48Bk1ItOWJFC3zRj0TCQCcA0w?e=JvuBus" 
+              class="modal-popup__details" target="_blank">
+              View Full Project
+       </a>
     </div>
 </div>
 
@@ -607,6 +606,29 @@
 .image-scroll a:hover {
     transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+/* Project Link Button */
+.modal-popup__details {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0; /* Center the button */
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #ff5722; /* Bright noticeable color */
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4); /* Soft glowing shadow */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.modal-popup__details:hover {
+    background: #e64a19;
+    box-shadow: 0 8px 20px rgba(255, 87, 34, 0.6);
+    transform: scale(1.05);
 }
 </style>
 
